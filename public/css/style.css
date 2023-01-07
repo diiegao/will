@@ -34,6 +34,27 @@ body {
     width: 200px;
 }
 
+.img-left {
+    animation: will .5s infinite alternate;
+}
+
+.img-right {
+    width: 280px !important;
+    animation: gira .5s infinite alternate;
+}
+
+@keyframes gira {
+    0% { transform: rotate(0); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes will {
+    25% { transform: rotate(15deg); }
+    50% { transform: rotate(0); }
+    75% { transform: rotate(-15deg); }
+    100% { transform: rotate(0); }
+}
+
 .result {
     display: flex;
     justify-content: center;
@@ -44,6 +65,14 @@ body {
 }
 
 .result > span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
     font-size: 18pt;
     font-weight: bold;
+    background-color: #282829;
+    border: solid 1px #343435;
+    border-radius: 50%;
 }
